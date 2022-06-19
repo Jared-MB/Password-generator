@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='./bundle/output.css'/>
+    <title>Password Generator</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Generador de contraseñas</h1>
+        </header>
+        <section>
+            <div>
+                <label id="rangeLabel">8</label>
+                <input type="range" min="6" max="20" value='8'>
+            </div>
+            <button id='btn'>
+                Generar
+            </button>
+            <span id='passwordField'></span>
+        </section>
+    </main>
+    <script type="module" src="../bundle/index.js"></script>
+</body>
+</html>
