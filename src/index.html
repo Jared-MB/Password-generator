@@ -4,23 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='./bundle/output.css'/>
+    <link rel='stylesheet' href='../bundle/normalize.css'/>
+    <link rel='stylesheet' href='../bundle/output.css'/>
     <title>Password Generator</title>
 </head>
 <body>
-    <main>
-        <header>
-            <h1>Generador de contraseñas</h1>
+    <main class='relative'>
+        <header class='border-b border-b-purple-700 h-14 px-3 flex justify-between items-center'>
+            <h1 class='text-purple-700 text-2xl'>Generador de contraseñas</h1>
+            <nav>
+                <a 
+                    href="https://github.com/Jared-MB/Password-generator" 
+                    target="_blank" 
+                    rel='noreferrer'
+                    class="text-purple-700 underline">Github</a>
+            </nav>
         </header>
-        <section>
-            <div>
-                <label id="rangeLabel">8</label>
-                <input type="range" min="6" max="20" value='8'>
-            </div>
-            <button id='btn'>
-                Generar
-            </button>
-            <span id='passwordField'></span>
+        <section class="w-full h-[calc(100%-3.5rem)] flex justify-center items-center">
+            <form class="border border-purple-700 shadow-md rounded-md p-4 w-[22rem]">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <label id="rangeLabel">8</label>
+                        <input type="range" min="6" max="20" value='8'>
+                    </div>
+                    <button id='btn' class="bg-purple-700 text-white py-1 px-2 rounded-md">
+                        Generar
+                    </button>
+                </div>
+                <div class='flex items-center'>
+                    <h2>Contraseña: <span id='passwordField' class="text-purple-700 text-lg"></span></h2>
+                    
+                </div>
+            </form>
         </section>
     </main>
     <script type="module" src="../bundle/index.js"></script>

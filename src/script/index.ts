@@ -3,7 +3,8 @@ const passwordField = document.getElementById('passwordField')
 const rangeLabel = document.getElementById('rangeLabel')
 const rangeInput = document.querySelector('input[type=range]')
 
-btn && btn.addEventListener('click', () => {
+btn && btn.addEventListener('click', e => {
+    e.preventDefault()
     const length = +(rangeInput as HTMLInputElement).value
     const password = generatePassword(length)
     if (passwordField) passwordField.innerHTML = password
@@ -53,3 +54,11 @@ const generatePassword = (length : number) : string => {
 
     return password
 } 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const main = document.querySelector('main')
+    if (main) {
+        main.style.width = window.innerWidth + 'px'
+        main.style.height = window.innerHeight + 'px'
+    }
+})
